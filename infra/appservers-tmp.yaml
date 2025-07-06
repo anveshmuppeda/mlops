@@ -1,0 +1,112 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to launch EC2 instances (for app servers) with a security group allowing SSH access and HTTP/HTTPS traffic.
+
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access
+    Type: AWS::EC2::KeyPair::KeyName
+  Environment:
+    Description: Environment for the application servers (e.g., Development, Production)
+    Type: String
+    Default: Development
+    AllowedValues:
+      - Development
+      - Production
+    ConstraintDescription: Must be either Development or Production.
+
+Resources:
+  S3ReadOnlyAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${Environment}-S3ReadOnlyAccessRole"
+      Description: Role to allow EC2 instances to read from S3
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+  S3ReadOnlyAccessInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub "${Environment}-S3ReadOnlyAccessInstanceProfile"
+      Roles:
+        - !Ref S3ReadOnlyAccessRole
+  AppServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+
+  AppServerInstance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t3.medium
+      KeyName: !Ref KeyName
+      ImageId: ami-05ffe3c48a9991133 # Amazon Linux 2 AMI (update as needed)
+      SecurityGroupIds:
+        - !Ref AppServerSecurityGroup
+      IamInstanceProfile: !Ref S3ReadOnlyAccessInstanceProfile
+      UserData:
+        Fn::Base64: 
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo yum install -y ruby wget
+            wget https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install
+            chmod +x ./install
+            sudo ./install auto
+            sudo service codedeploy-agent status
+      Tags:
+        - Key: Name
+          Value: AppServerInstance1
+        - Key: Environment
+          Value: !Ref Environment
+
+  AppServerInstance2:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t3.medium
+      KeyName: !Ref KeyName
+      ImageId: ami-05ffe3c48a9991133 # Amazon Linux 2 AMI (update as needed)
+      SecurityGroupIds:
+        - !Ref AppServerSecurityGroup
+      IamInstanceProfile: !Ref S3ReadOnlyAccessInstanceProfile
+      UserData:
+        Fn::Base64: 
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo yum install -y ruby wget
+            wget https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install
+            chmod +x ./install
+            sudo ./install auto
+            sudo service codedeploy-agent status
+      Tags:
+        - Key: Name
+          Value: AppServerInstance2
+        - Key: Environment
+          Value: !Ref Environment
+
+Outputs:
+  Instance1Id:
+    Description: Instance ID of the first EC2 server
+    Value: !Ref AppServerInstance1
+  Instance2Id:
+    Description: Instance ID of the second EC2 server
+    Value: !Ref AppServerInstance2
