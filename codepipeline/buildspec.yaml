@@ -21,3 +21,7 @@ phases:
         commands:
             - echo "We are currently on post_build phase"
             - echo "Post-Build phase is now completed"
+
+artifacts:
+    files:
+        - '**/*'
