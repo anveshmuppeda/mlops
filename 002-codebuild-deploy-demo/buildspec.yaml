@@ -20,7 +20,7 @@ phases:
     post_build:
         commands:
             - echo "We are currently on post_build phase"
-            - chmod +x scripts/*.sh
+            - chmod +x 002-codebuild-deploy-demo/scripts/*.sh
             - echo "Post-Build phase is now completed"
 
 artifacts:
