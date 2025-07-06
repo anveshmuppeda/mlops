@@ -1,0 +1,28 @@
+version: 0.2
+
+phases: 
+    install:
+        runtime-versions:
+            nodejs: 12
+        commands:
+            - echo "This is the start of Install phase"
+            - echo "Installing Node.js version 12"
+            - echo "Node.js installation is complete"
+    pre_build:
+        commands: 
+            - echo "This is the start of Pre-Build phase"
+            - echo "Pre-Build phase is now completed"
+    build:
+        commands:
+            - echo "This is the start of Build phase"
+            - echo "Building the application"
+            - echo "Build phase is now completed"
+    post_build:
+        commands:
+            - echo "We are currently on post_build phase"
+            - chmod +x scripts/*.sh
+            - echo "Post-Build phase is now completed"
+
+artifacts:
+    files:
+        - '**/*'
