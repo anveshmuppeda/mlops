@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: 002-codebuild-deploy-demo/index.html
+  - source: 002-codebuild-deploy-demo/app/index.html
     destination: /var/www/html/
 hooks:
   ApplicationStop:

@@ -92,3 +92,6 @@ This script will create a CloudFormation stack that sets up the necessary infras
 2. Click on **Create deployment**.
 3. Fill in the deployment group name you created earlier.
 4. In the **Revision type**, choose **My application is stored in Amazon S3**.
+5. Specify the S3 bucket and the path to the build artifact (e.g., `s3://your-bucket-name/build-artifact.zip`).
+6. Select **Revision File Type** as build artifact type extension (e.g., `zip`).
+7. Click on **Create deployment**.
