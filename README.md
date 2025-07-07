@@ -4,7 +4,25 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![AWS](https://img.shields.io/badge/AWS-Cloud-orange.svg)](https://aws.amazon.com/)
 
-A comprehensive repository demonstrating end-to-end MLOps implementation using AWS services. This project covers the complete machine learning lifecycle from data ingestion to model deployment and monitoring using AWS-native tools and services.
+<div align="center"> 
+  <h1>🚀 MLOps with AWS - Complete Implementation Guides 🌟 </h1>
+  <a href="https://github.com/anveshmuppeda/mlops"><img src="https://readme-typing-svg.demolab.com?font=italic&weight=700&size=18&duration=4000&pause=1000&color=F727A9&center=true&width=600&lines=Learn+mlops+with+hands-on+guides+and+practical+examples." alt="Typing SVG" /> </a>  
+  <br>
+  <img src="https://img.shields.io/github/forks/anveshmuppeda/mlops" alt="Forks"/>
+  <img src="https://img.shields.io/github/stars/anveshmuppeda/mlops" alt="Stars"/>
+  <img src="https://img.shields.io/github/watchers/anveshmuppeda/mlops" alt="Watchers"/>
+  <img src="https://img.shields.io/github/last-commit/anveshmuppeda/mlops" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/commit-activity/m/anveshmuppeda/mlops" alt="Commit Activity"/>
+  <img src="https://img.shields.io/github/repo-size/anveshmuppeda/mlops" alt="Repo Size"/>
+  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
+
+  <!-- <img src="https://awesome.re/badge.svg" alt="Awesome"/> -->
+  <a href="https://github.com/anveshmuppeda/mlops/blob/main/LICENSE"> <img src="https://img.shields.io/github/license/anveshmuppeda/mlops" alt="GitHub License"/> </a>
+  <a href="https://github.com/anveshmuppeda/mlops/graphs/contributors"> <img src="https://img.shields.io/github/contributors/anveshmuppeda/mlops" alt="GitHub contributors"/> </a>
+  <a href="https://github.com/anveshmuppeda/mlops/issues">  <img src="https://img.shields.io/github/issues/anveshmuppeda/mlops" alt="Open Issues"/> </a>
+  <a href="https://github.com/anveshmuppeda/mlops/pulls"> <img src="https://img.shields.io/github/issues-pr-raw/anveshmuppeda/mlops" alt="Open PRs"/> </a>
+  <a href="https://github.com/anveshmuppeda/mlops/pulls"> <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/> </a>
+</div>
 
 ---  
 
@@ -21,6 +39,8 @@ A comprehensive repository demonstrating end-to-end MLOps implementation using A
 </div>  
 
 ---  
+
+A comprehensive repository demonstrating end-to-end MLOps implementation using AWS services. This project covers the complete machine learning lifecycle from data ingestion to model deployment and monitoring using AWS-native tools and services.
 
 ## 🎯 Project Overview
 
