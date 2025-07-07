@@ -1,11 +1,11 @@
-# MLOps with AWS - Complete Implementation Guides
+<!-- # MLOps with AWS - Complete Implementation Guides
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![AWS](https://img.shields.io/badge/AWS-Cloud-orange.svg)](https://aws.amazon.com/)
+[![AWS](https://img.shields.io/badge/AWS-Cloud-orange.svg)](https://aws.amazon.com/) -->
 
 <div align="center"> 
-  <h1>🚀 MLOps with AWS - Complete Implementation Guides 🌟 </h1>
+  <h1>🚀 MLOps with AWS - Complete Implementation Guides 🌟</h1>
   <a href="https://github.com/anveshmuppeda/mlops"><img src="https://readme-typing-svg.demolab.com?font=italic&weight=700&size=18&duration=4000&pause=1000&color=F727A9&center=true&width=600&lines=Learn+mlops+with+hands-on+guides+and+practical+examples." alt="Typing SVG" /> </a>  
   <br>
   <img src="https://img.shields.io/github/forks/anveshmuppeda/mlops" alt="Forks"/>
