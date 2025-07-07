@@ -95,3 +95,18 @@ This script will create a CloudFormation stack that sets up the necessary infras
 5. Specify the S3 bucket and the path to the build artifact (e.g., `s3://your-bucket-name/build-artifact.zip`).
 6. Select **Revision File Type** as build artifact type extension (e.g., `zip`).
 7. Click on **Create deployment**.
+
+## Step 6: Verify Deployment
+1. Go to the EC2 instances where you deployed the application.
+2. SSH into the instance and navigate to the `/var/www/html/` directory.
+3. You should see the `index.html` file deployed there.
+4. Open a web browser and navigate to the public IP address of the EC2 instance to see your HTML application running.
+
+## Step 7: Clean Up
+To clean up the resources created during this demo, you can run the `destroy-cft.sh` script in the `infra` directory:
+```bashcd 002-codebuild-deploy-demo/infra
+./destroy-cft.sh
+```
+This will delete the CloudFormation stack and all associated resources.
+
+And delete the CodeBuild and CodeDeploy resources manually from the AWS Management Console if needed.
