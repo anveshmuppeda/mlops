@@ -24,5 +24,6 @@ phases:
             - echo "Post-Build phase is now completed"
 
 artifacts:
+    base-directory: 002-codebuild-deploy-demo
     files:
         - '**/*'
