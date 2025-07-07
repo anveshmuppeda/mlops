@@ -6,6 +6,22 @@
 
 A comprehensive repository demonstrating end-to-end MLOps implementation using AWS services. This project covers the complete machine learning lifecycle from data ingestion to model deployment and monitoring using AWS-native tools and services.
 
+---  
+
+<div align="center">
+  <h2><b>Author: <a href="https://github.com/anveshmuppeda">Anvesh Muppeda</a> <img src="https://avatars.githubusercontent.com/u/115966808?v=4&s=20" alt="Profile Pic"/></b></h2>
+  <p> 
+    <i>Cloud Engineer | Kubernetes Developer | Open Source Contributor</i>
+  </p>
+  <a href="https://www.linkedin.com/in/anveshmuppeda/"> <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&style=flat" alt="LinkedIn"/> </a>
+  <a href="https://twitter.com/Anvesh66743877"> <img src="https://img.shields.io/badge/Twitter-Follow-blue?logo=twitter&style=flat" alt="Twitter"/> </a>
+  <a href="https://medium.com/@muppedaanvesh"> <img src="https://img.shields.io/badge/Medium-Blog-black?logo=medium&style=flat" alt="Medium"/> </a>
+  <a href="mailto:muppedaanvesh@gmail.com"> <img src="https://img.shields.io/badge/Email-Contact%20Me-red?logo=gmail&style=flat" alt="Email"/> </a>
+  <a href="https://hub.docker.com/u/anvesh35"> <img src="https://img.shields.io/badge/DockerHub-Profile-blue?logo=docker&style=flat" alt="DockerHub"/> </a>
+</div>  
+
+---  
+
 ## 🎯 Project Overview
 
 This repository provides practical examples and templates for implementing MLOps pipelines on AWS, covering:
