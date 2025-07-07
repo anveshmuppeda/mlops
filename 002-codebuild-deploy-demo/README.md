@@ -140,14 +140,6 @@ chmod +x scripts/*.sh
 3. Attach policy: `AWSCodeDeployRole`
 4. Name the role (e.g., `CodeDeployServiceRole`)
 
-### 3.3 EC2 Instance Profile Role
-1. Create a role for EC2 instances
-2. Select **AWS service** → **EC2**
-3. Attach policies:
-   - `AmazonS3ReadOnlyAccess` (or custom policy for your artifact bucket)
-   - `AmazonSSMManagedInstanceCore` (for Systems Manager)
-4. Name the role (e.g., `EC2CodeDeployRole`)
-
 ## Step 4: Deploy Infrastructure using CloudFormation
 1. Navigate to the infra directory:
    ```bash
