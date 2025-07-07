@@ -8,7 +8,7 @@ This example demonstrates how to deploy a simple HTML application using AWS Code
 - Basic understanding of AWS CodeBuild, CodeDeploy, and S3
 - Clone this repository to your local machine:
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/anveshmuppeda/mlops.git
     ```
 - Navigate to the `002-codebuild-deploy-demo` directory:
     ```bash
@@ -17,7 +17,7 @@ This example demonstrates how to deploy a simple HTML application using AWS Code
 
 ## Project Structure
 ```
-002-codebuild-deploy-demo/
+mlops/002-codebuild-deploy-demo/
 ├── README.md
 ├── app/
 │   └── index.html
