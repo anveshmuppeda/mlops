@@ -2,7 +2,7 @@
 
 This example demonstrates how to deploy a simple HTML application using AWS CodeBuild and CodeDeploy with proper configuration and troubleshooting solutions.
 
-![MLOps with AWS](./img/mlops-awscodebuilddeploy.png)
+![MLOps with AWS](./img/mlops-awscodebuilddeploy.png). 
 
 ## Prerequisites
 - AWS account with necessary permissions to create CodeBuild, CodeDeploy, S3, EC2, and CloudFormation resources
