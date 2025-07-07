@@ -178,7 +178,9 @@ sudo service codedeploy-agent enable
 2. Click **Create build project**
 3. Configure:
    - **Project name**: `Html-CodeBuild-Project`
+   ![CodeBuild Project Configuration](./img/build-01-project.png))
    - **Source provider**: GitHub/CodeCommit
+   ![CodeBuild Source Configuration](./img/build-02-source.png)
    - **Repository**: Select your repository
    - **Environment**:
      - Environment image: Managed image
@@ -186,13 +188,17 @@ sudo service codedeploy-agent enable
      - Operating system: Amazon Linux
      - Runtime: Standard
      - Service role: Use the role created in Step 3.1
+     ![CodeBuild Environment Configuration](./img/build-03-env.png)
    - **Buildspec**: Use a buildspec file (buildspec.yaml in your repo)
+     ![CodeBuild Buildspec Configuration](./img/build-04-spec.png)
    - **Artifacts**:
      - Type: Amazon S3
      - Bucket name: The bucket created in Step 2
      - Path: `builds/` (optional)
      - Packaging: Zip
+    ![CodeBuild Artifacts Configuration](./img/build-05-artifact.png)
 4. Click **Create build project**
+![CodeBuild Project Configuration](./img/build-06.png)
 
 ## Step 6: Create CodeDeploy Application
 1. Go to the [AWS CodeDeploy console](https://console.aws.amazon.com/codesuite/codedeploy/applications)
@@ -201,6 +207,7 @@ sudo service codedeploy-agent enable
    - **Application name**: `Html-CodeDeploy-Application`
    - **Compute platform**: EC2/On-premises
 4. Click **Create application**
+![CodeDeploy Application Configuration](./img/deploy-01-app.png). 
 
 ## Step 7: Create CodeDeploy Deployment Group
 1. In your CodeDeploy application, click **Create deployment group**
@@ -212,7 +219,10 @@ sudo service codedeploy-agent enable
    - **Tag filters**: Add tags that match your EC2 instances (e.g., `Environment: Development`)
    - **Deployment settings**: `CodeDeployDefault.OneAtATime`
    - **Load balancer**: Disable (unless using one)
+![CodeDeploy Deployment Group Configuration](./img/deploy-02-group.png)
+![CodeDeploy Deployment Group Configuration](./img/deploy-03-env.png)
 3. Click **Create deployment group**
+![CodeDeploy Deployment Group Configuration](./img/deploy-04.png)
 
 ## Step 8: Test the Build Process
 1. Go to your CodeBuild project
@@ -230,6 +240,7 @@ sudo service codedeploy-agent enable
    - **Revision location**: `s3://your-bucket-name/builds/build-artifact.zip`
    - **Revision file type**: .zip
 4. Click **Create deployment**
+![CodeDeploy Deployment Configuration](./img/deployment.png)
 
 ## Step 10: Monitor and Verify Deployment
 1. Monitor the deployment progress in the CodeDeploy console
@@ -243,6 +254,7 @@ sudo service codedeploy-agent enable
    sudo systemctl status httpd  # or nginx
    ```
 4. Test the application by accessing the public IP of your EC2 instance in a browser
+![CodeDeploy Deployment Monitoring](./img/results.png)
 
 ## Troubleshooting Common Issues
 
