@@ -3,6 +3,7 @@ import numpy as np
 import json
 import random
 from datetime import datetime, timedelta
+import os
 
 # Set random seed for reproducibility
 np.random.seed(42)
@@ -41,5 +42,8 @@ df = pd.DataFrame(data)
 df.loc[np.random.choice(df.index, size=int(num_records * 0.05), replace=False), "age"] = np.nan
 df.loc[np.random.choice(df.index, size=int(num_records * 0.1), replace=False), "salary"] = np.nan
 
+# Ensure 'data' folder exists
+os.makedirs("data", exist_ok=True)
+
 # Save to CSV
-df.to_csv("mock_data.csv", index=False)
+df.to_csv("data/mock_data.csv", index=False)
