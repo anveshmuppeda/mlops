@@ -1,7 +1,7 @@
 # Data Transformation Pipeline for MLOps Using Jupyter Notebooks
 *A hands-on guide to building a data transformation workflow using Python, Pandas, and best practices in MLOps.*. 
 
-![Jupyter Notebook](./img/jupyter-notebook.png)
+![Jupyter Notebook](./img/mlops-data-prep-jupyter.png)
 
 ## 🎯 Overview
 
