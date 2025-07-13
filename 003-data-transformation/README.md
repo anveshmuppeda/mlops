@@ -4,7 +4,7 @@
 
 This module implements a comprehensive data transformation pipeline designed for machine learning operations (MLOps). It transforms raw data into a format suitable for training machine learning models through systematic data cleaning, normalization, and feature engineering processes.
 
-The transformation pipeline is implemented in a Jupyter notebook (`[data_transformation.ipynb](./data_transformation.ipynb)`) that follows MLOps best practices for reproducibility, monitoring, and automation.
+The transformation pipeline is implemented in a Jupyter notebook ([data_transformation.ipynb](./data_transformation.ipynb)) that follows MLOps best practices for reproducibility, monitoring, and automation.
 
 ## 🛠️ Environment Setup
 
