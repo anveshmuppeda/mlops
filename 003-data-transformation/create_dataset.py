@@ -46,4 +46,4 @@ df.loc[np.random.choice(df.index, size=int(num_records * 0.1), replace=False), "
 os.makedirs("data", exist_ok=True)
 
 # Save to CSV
-df.to_csv("data/mock_data.csv", index=False)
+df.to_csv("data/mock_data_orig.csv", index=False)
