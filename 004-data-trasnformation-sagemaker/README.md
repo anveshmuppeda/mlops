@@ -1,4 +1,6 @@
 # Data Transformation using Amazon SageMaker Data Wrangler
+*A hands-on guide to building a data transformation workflow using Amazon SageMaker Data Wrangler.*
+![SageMaker Data Wrangler](./img/mlops-sagemaker-datawrangler.png)
 
 This guide demonstrates how to perform data transformation using **Amazon SageMaker Data Wrangler**, following similar steps to the [previous module](./../003-data-transformation/data_transformation.ipynb), but using the Data Wrangler UI instead of Jupyter notebooks.
 
