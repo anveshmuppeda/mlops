@@ -1,5 +1,7 @@
 # Data Transformation using Amazon SageMaker Data Wrangler
 
+This documents follow the same steps as the [previous module](./../003-data-transformation/data_transformation.ipynb) where we used Jupyter Notebooks, but this time we will use Amazon SageMaker Data Wrangler to perform the data transformation.
+
 First let's set up the sagemaker data wrangler environment. This will allow us to use the data wrangler to transform the data.
 
 1. Upload the `mock_data.csv` file to an S3 bucket. This file contains the original dataset that we will be transforming. (you can find the file in the `data` folder of this repository)
