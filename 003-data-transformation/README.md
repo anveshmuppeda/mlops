@@ -1,6 +1,8 @@
 # Data Transformation Pipeline for MLOps Using Jupyter Notebooks
 *A hands-on guide to building a data transformation workflow using Python, Pandas, and best practices in MLOps.*
 
+![Jupyter Notebook](./img/jupyter-notebook.png)
+
 ## 🎯 Overview
 
 This module implements a comprehensive data transformation pipeline designed for machine learning operations (MLOps). It transforms raw data into a format suitable for training machine learning models through systematic data cleaning, normalization, and feature engineering processes.
