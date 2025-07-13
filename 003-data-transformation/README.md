@@ -54,16 +54,16 @@ This command opens Jupyter Notebook in your default web browser, providing an in
 
 ## 🔄 Pipeline Architecture
 
-The data transformation pipeline consists of four main phases. **Follow the `[data_transformation.ipynb](data_transformation.ipynb)` notebook to implement all these steps:**
+The data transformation pipeline consists of four main phases. **Follow the [data_transformation.ipynb](data_transformation.ipynb) notebook to implement all these steps:**
 
 ### 📦 1. Environment Preparation
-**Implementation**: See Section 1 in `[data_transformation.ipynb](data_transformation.ipynb)`
+**Implementation**: See Section 1 in [data_transformation.ipynb](data_transformation.ipynb)
 - **1.1 Install Dependencies**: Set up required Python packages
 - **1.2 Create Dataset**: Generate or load the source dataset
 - **1.3 Import Libraries**: Load necessary Python libraries for data processing
 
 ### 🔍 2. Data Exploration & Profiling
-**Implementation**: See Section 2 in `[data_transformation.ipynb](data_transformation.ipynb)`
+**Implementation**: See Section 2 in [data_transformation.ipynb](data_transformation.ipynb)
 - **2.1 Data Loading**: Load CSV data into pandas DataFrame
 - **2.2 Data Analysis**: Comprehensive data profiling and quality assessment
   - Dataset shape and structure analysis
@@ -73,7 +73,7 @@ The data transformation pipeline consists of four main phases. **Follow the `[da
   - Duplicate detection and handling
 
 ### 🧹 3. Data Cleaning & Quality Improvement
-**Implementation**: See Section 3 in `[data_transformation.ipynb](data_transformation.ipynb)`
+**Implementation**: See Section 3 in [data_transformation.ipynb](data_transformation.ipynb)
 - **3.1 Numeric Data Cleaning**: Handle missing values in age and salary columns
   - Strategy: Median imputation for robustness against outliers
   - Documentation of imputation methods for reproducibility
@@ -91,7 +91,7 @@ The data transformation pipeline consists of four main phases. **Follow the `[da
   - Data range validation
 
 ### 🔄 4. Feature Engineering & Transformation
-**Implementation**: See Section 4 in `[data_transformation.ipynb](data_transformation.ipynb)`
+**Implementation**: See Section 4 in [data_transformation.ipynb](data_transformation.ipynb)
 - **4.1 Address Length Feature**: Calculate address length for geographic analysis
 - **4.2 Salary Categorization**: Convert continuous salary into ordinal categories
 - **4.3 Age Group Creation**: Demographic segmentation based on age ranges
@@ -121,7 +121,7 @@ The data transformation pipeline consists of four main phases. **Follow the `[da
 
 ## 📁 Output Files
 
-The pipeline generates several output files for different use cases. **All file generation steps are detailed in the `[data_transformation.ipynb](data_transformation.ipynb)` notebook:**
+The pipeline generates several output files for different use cases. **All file generation steps are detailed in the [data_transformation.ipynb](data_transformation.ipynb) notebook:**
 
 1. **`cleaned_data.csv`**: Data after cleaning and quality improvements
 2. **`transformed_data.csv`**: Final dataset with all engineered features
