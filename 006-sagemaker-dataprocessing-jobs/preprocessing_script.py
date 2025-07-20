@@ -5,7 +5,6 @@ import json
 import numpy as np
 from datetime import datetime
 
-
 # Load dataset
 try:
     df = pd.read_csv('/opt/ml/processing/input/mock_data.csv')
