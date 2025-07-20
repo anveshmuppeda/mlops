@@ -1,0 +1,78 @@
+# === Python Bytecode ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Virtual Environments ===
+env/
+venv/
+ENV/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+
+# === Jupyter Notebook Checkpoints ===
+.ipynb_checkpoints/
+
+# === Machine Learning Artifacts ===
+# Model weights, checkpoints, and temporary training files
+*.ckpt
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.pb
+*.tflite
+*.onnx
+checkpoint/
+checkpoints/
+runs/         # for TensorBoard logs
+logs/
+lightning_logs/
+
+# === Dataset Files ===
+*.csv
+*.tsv
+*.json
+*.xls
+*.xlsx
+*.parquet
+*.npz
+*.npy
+*.pkl
+*.joblib
+data/
+datasets/
+
+# === Cache & Build ===
+*.log
+*.out
+*.bak
+*.tmp
+*.swp
+.DS_Store
+.cache/
+build/
+dist/
+*.ipynb~       # notebook autosave temp files
+
+# === System / IDE Specific ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === Jupyter Kernel & Metadata ===
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+*.nbstripout
+
+# === Other Tools ===
+.mypy_cache/
+.pytest_cache/
+coverage.*
+htmlcov/
+.tox/
