@@ -278,10 +278,32 @@ Whether you're handling thousands or millions of records, this approach provides
 
 ---
 
-## Resources
 
-- [Amazon SageMaker Processing Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/processing-job.html)
-- [SageMaker Python SDK](https://sagemaker.readthedocs.io/)
-- [Complete notebook on GitHub](https://github.com/your-repo/sagemaker-processing-pipeline)
+## Getting Started
 
-*Have questions about implementing SageMaker Processing Jobs in your organization? Feel free to reach out in the comments below!*
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/anveshmuppeda/mlops.git
+   ```
+
+2. **Open SageMaker Studio** and navigate to the notebook
+
+3. **Follow along** with the step-by-step implementation
+
+4. **Experiment** with your own datasets and transformations
+
+## Conclusion
+
+Data preprocessing might not be glamorous, but it's the foundation of successful machine learning projects. This simple example demonstrates core concepts you'll use daily as a data scientist.
+
+The beauty of SageMaker Studio is that it provides a familiar Jupyter environment with powerful cloud infrastructure behind it. You can start simple like this tutorial and gradually scale to production-ready pipelines.
+
+---
+
+**Ready to dive deeper?** Check out the complete notebook implementation and start building your own data processing pipelines today!
+
+🔗 **[Complete Code on GitHub](./data_transformation.ipynb)**
+
+---
+
+*Found this helpful? Follow me for more AWS and MLOps tutorials! 👍*
