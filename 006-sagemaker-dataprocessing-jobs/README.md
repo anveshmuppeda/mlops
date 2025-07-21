@@ -2,13 +2,15 @@
 
 *A comprehensive guide to implementing MLOps best practices for data preprocessing and feature engineering*
 
-
+![SageMaker Processing Jobs](./img/sagemaker-data-processing-job.png)
 
 ## Introduction
 
 In the world of machine learning, data preprocessing often consumes 80% of a data scientist's time. As organizations scale their ML operations, the need for robust, repeatable, and scalable data transformation pipelines becomes critical. Amazon SageMaker Processing Jobs provide an elegant solution for building production-ready data transformation workflows that integrate seamlessly with your MLOps pipeline.
 
 In this guide, I'll walk you through creating a comprehensive data transformation pipeline using SageMaker Processing Jobs, demonstrating how to handle real-world data quality challenges while maintaining MLOps best practices.
+
+![SageMaker Data Processing](./img/data-processing-guide.png)
 
 ## What Are SageMaker Processing Jobs?
 
@@ -164,6 +166,8 @@ processor.run(
     )]
 )
 ```
+
+![SageMaker Processing Job](./img/data-processing-job.png)
 
 ## Step 5: Results and Validation
 

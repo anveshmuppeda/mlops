@@ -6,6 +6,8 @@
 
 Data preprocessing is a fundamental skill every data scientist needs to master. In this tutorial, I'll show you how to build a simple data transformation pipeline using **Amazon SageMaker Studio with JupyterLab** to clean and prepare data for machine learning.
 
+![SageMaker Data Processing](./img/sagemaker-jupyterlabs-guide.png)
+
 ## What You'll Learn
 
 In this hands-on tutorial, we'll cover:
