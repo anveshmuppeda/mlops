@@ -44,7 +44,7 @@ lightning_logs/
 *.npy
 *.pkl
 *.joblib
-data/
+# data/
 datasets/
 
 # === Cache & Build ===
