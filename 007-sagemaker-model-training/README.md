@@ -1,4 +1,4 @@
-# MLOps with AWS Series - Part 7: Training Models with Amazon SageMaker Linear Learner
+# MLOps with AWS Series - Part 6: Training Models with Amazon SageMaker Linear Learner
 
 *Learn how to train machine learning models at scale using Amazon SageMaker's built-in Linear Learner algorithm. This is Part 5 of our complete MLOps with AWS series.*
 
