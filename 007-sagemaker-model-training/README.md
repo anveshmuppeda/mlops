@@ -2,6 +2,8 @@
 
 *Learn how to train machine learning models at scale using Amazon SageMaker's built-in Linear Learner algorithm. This is Part 5 of our complete MLOps with AWS series.*
 
+![Model Training with SageMaker](./img/06-sagemaker-model-training.png)
+
 This notebook demonstrates the complete machine learning model training pipeline using Amazon SageMaker's built-in Linear Learner algorithm. This is the 6th part of our ML pipeline:
 
 **Pipeline Overview:**
@@ -243,6 +245,9 @@ print("Training completed successfully! 🎉")
 5. **Artifact storage:** Trained model is saved to S3
 6. **Cleanup:** Training instances are automatically terminated
 
+![Training Process](./img/01_model_training.png)
+![Training Artifacts](./img/02_model_artifacts.png)
+
 ---
 
 ## Step 6: Training Job Monitoring
@@ -260,6 +265,8 @@ print("- Validation accuracy")
 print("- Training time")
 print("- Resource utilization")
 ```
+![Training Job Monitoring](./img/04-model-performance.png)
+![Hyperparameter Tuning](./img/05-model-hyperparameters.png)
 
 ### Understanding Training Logs
 The training output shows:
@@ -267,6 +274,7 @@ The training output shows:
 - **Loss values:** How well the model is learning (lower = better)
 - **Validation metrics:** Performance on unseen data
 - **Resource usage:** CPU, memory, and time consumption
+![Training Logs](./img/03-model-logs.png)
 
 ---
 
