@@ -1,10 +1,10 @@
 # MLOps with AWS Series - Part 6: Training Models with Amazon SageMaker Linear Learner
 
-*Learn how to train machine learning models at scale using Amazon SageMaker's built-in Linear Learner algorithm. This is Part 5 of our complete MLOps with AWS series.*
+*Learn how to train machine learning models at scale using Amazon SageMaker's built-in Linear Learner algorithm. This is Part 6 of our complete MLOps with AWS series.*
 
 ![Model Training with SageMaker](./img/06-sagemaker-model-training.png)
 
-This notebook demonstrates the complete machine learning model training pipeline using Amazon SageMaker's built-in Linear Learner algorithm. This is the 6th part of our ML pipeline:
+This [notebook](./model_training.ipynb) demonstrates the complete machine learning model training pipeline using Amazon SageMaker's built-in Linear Learner algorithm. This is the 6th part of our ML pipeline:
 
 **Pipeline Overview:**
 1. **Data Processing Notebook** (Previous): Data transformation, feature engineering, and preprocessing
@@ -410,6 +410,6 @@ In **Part 7: Model Evaluation and Validation**, we'll cover:
 
 ---
 
-*This is Part 5 of our MLOps with AWS series. Follow along to build a complete, production-ready machine learning pipeline.*
+*This is Part 6 of our MLOps with AWS series. Follow along to build a complete, production-ready machine learning pipeline.*
 
 **Tags:** #MLOps #AWS #SageMaker #MachineLearning #ModelTraining #LinearLearner
