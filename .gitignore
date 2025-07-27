@@ -34,7 +34,7 @@ logs/
 lightning_logs/
 
 # === Dataset Files ===
-*.csv
+# *.csv
 *.tsv
 *.json
 *.xls
