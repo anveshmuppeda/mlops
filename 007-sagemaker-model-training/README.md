@@ -2,7 +2,7 @@
 
 *Learn how to train machine learning models at scale using Amazon SageMaker's built-in Linear Learner algorithm. This is Part 5 of our complete MLOps with AWS series.*
 
-This notebook demonstrates the complete machine learning model training pipeline using Amazon SageMaker's built-in Linear Learner algorithm. This is the second part of our ML pipeline:
+This notebook demonstrates the complete machine learning model training pipeline using Amazon SageMaker's built-in Linear Learner algorithm. This is the 6th part of our ML pipeline:
 
 **Pipeline Overview:**
 1. **Data Processing Notebook** (Previous): Data transformation, feature engineering, and preprocessing
@@ -17,7 +17,7 @@ This notebook demonstrates the complete machine learning model training pipeline
 - Downloads the trained model artifacts for future use
 
 **Prerequisites:**
-- Completed data processing notebook: [Data Processing Notebook](./data_transformation_jupyterlab.ipynb)
+- Complete data processing notebook: [Data Processing Notebook](./data_transformation_jupyterlab.ipynb)
 - Transformed data available in S3: `s3://{bucket}/output/transformed_data.csv`
 - SageMaker execution role with necessary permissions
 
@@ -368,7 +368,7 @@ train_data.to_csv('train.csv', index=False, header=False)
 
 ## What's Next?
 
-In **Part 8: Model Evaluation and Validation**, we'll cover:
+In **Part 7: Model Evaluation and Validation**, we'll cover:
 - Loading trained models for evaluation
 - Generating predictions on test data
 - Creating performance visualizations
@@ -376,8 +376,8 @@ In **Part 8: Model Evaluation and Validation**, we'll cover:
 - Residual analysis and error patterns
 
 **Coming up in the series:**
-- Part 9: Deploying models to real-time endpoints
-- Part 10: Setting up model monitoring and alerts
+- Part 8: Deploying models to real-time endpoints
+- Part 9: Setting up model monitoring and alerts
 
 ---
 
