@@ -1,6 +1,8 @@
 # 📦 Model Registry and Versioning with Amazon SageMaker 🛠️
 ⇢ MLOps with AWS Series — Part 7
 
+![Model Registry](./img/07-sagemaker-model-registry.png)
+
 ## Overview
 In this guide, we'll learn how to register and manage machine learning models using Amazon SageMaker Model Registry. This is a crucial step in MLOps that enables proper model governance, versioning, and lifecycle management.
 
@@ -108,6 +110,7 @@ except sagemaker_client.exceptions.ResourceInUse:
     # Handle case where group already exists
     print(f'Model Package Group {model_package_group_name} already exists.')
 ```
+![Model Package Group](./img/01-model-registry.png)
 
 **Key Points:**
 - Model Package Groups provide organizational structure
@@ -144,6 +147,8 @@ print(f"Model package version ARN: {model_package.model_package_arn}")
 - Approval status controls model deployment eligibility
 - Instance type specifications guide deployment decisions
 - Custom metadata enables better model tracking and governance
+
+![Model Registration](./img/02-model-version.png) 
 
 ### Step 5: Retrieve and Manage Model Versions
 ```python
@@ -189,6 +194,9 @@ for model_pkg in response['ModelPackageSummaryList']:
 - Approval status enables governance workflows
 - ARNs provide unique identifiers for each model version
 - Creation timestamps help track model evolution
+
+![Model Version Tracking](./img/03-model-1.png)
+![Model Version Tracking](./img/04-model-pending.png)
 
 ---
 
