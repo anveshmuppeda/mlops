@@ -1,5 +1,6 @@
 # Complete MLOps Pipeline with SageMaker Pipelines
 ## Employee Bonus Prediction - End-to-End Machine Learning Workflow
+*⇢ MLOps with AWS Series — Part 8*  
 
 This notebook demonstrates a complete MLOps pipeline using Amazon SageMaker Pipelines for predicting employee bonuses. The pipeline includes data preprocessing, model training, and model registration with proper governance.
 
