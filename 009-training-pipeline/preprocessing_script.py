@@ -158,45 +158,55 @@ print(transform_df['age_group'].value_counts())
 print("\nSample data after adding the 'age_group' column: \n")
 transform_df[['age', 'age_group']].head()
 
-print("\n🔧 Creating Department Statistics...")
-# Group by 'department' and calculate average salary and age
-department_summary_report = df.groupby('department').agg({
-    'salary': 'mean',
-    'age': 'mean'
-}).reset_index()
+# Check for missing values
+print("\n❓ Missing Values Analysis before Removing Missing:\n")
+print(transform_df.isnull().sum())
 
-# rename columns of department_summary_report for clarity
-department_summary_report.columns = ['Department', 'Average Salary', 'Average Age']
-
-# Print the Summary Report
-print("Summary report of average salary and age based on the department:\n")
-print(department_summary_report)
+# Remove missing rows for bonus
+transform_df = transform_df[transform_df['bonus'].notna()]
+print("\n❓ Missing Values Analysis after Removing Missing:\n")
+transform_df.isnull().sum()
 
 
-print("\n📊 Data Quality Metrics...")
+transform_df = pd.get_dummies(transform_df, columns=['department', 'age_group', 'salary_category'], prefix=['dept', 'age', 'salary'])
+print("Top 5 rows with boolean values")
+print(transform_df.head())
 
-quality_metrics = {
-    'total_rows': len(transform_df),
-    'total_columns': len(transform_df.columns),
-    'missing_values_count': transform_df.isnull().sum().sum(),
-    'duplicate_rows': transform_df.duplicated().sum(),
-    'numeric_columns': len(transform_df.select_dtypes(include=[np.number]).columns),
-    'categorical_columns': len(transform_df.select_dtypes(include=['object']).columns),
-    'unique_departments': transform_df['department'].nunique(),
-    'unique_age_groups': transform_df['age_group'].nunique(),
-    'unique_salary_categories': transform_df['salary_category'].nunique(),
-    'processing_timestamp': datetime.now().isoformat()
-}
+bool_cols = transform_df.select_dtypes(include='bool').columns
+transform_df[bool_cols] = transform_df[bool_cols].astype(int)
 
-print("Data Quality Metrics:")
-for metric, value in quality_metrics.items():
-    print(f"  {metric}: {value}")
+print("\nTop 5 rows with numberic values\n")
+print(transform_df.head())
+
+print("Convert hire_date to datetime")
+transform_df['hire_date'] = pd.to_datetime(transform_df['hire_date'], errors='coerce')
+print(transform_df['hire_date'].head())
+# print(transform_df.dtypes)
+
+# non_date_rows = transform_df[transform_df['hire_date'].apply(lambda x: isinstance(x, str))]
+# print("non date rows:")
+# print(non_date_rows)
+
+print("Calculate Tenure in Days....")
+transform_df['tenure_days'] = (pd.Timestamp('now') - transform_df['hire_date']).dt.days
+
+print("Calculated Tenure Days")
+print(transform_df['tenure_days'])
+
+print("Handle Missing values of tenure_days")
+transform_df['tenure_days'] = transform_df['tenure_days'].fillna(transform_df['tenure_days'].median())
+
+print("Tenure Days after handled missing days")
+print(transform_df['tenure_days'])
+
+
+
+print("Dropping ID, Address, Phone, Name, Hire Date, and Email.....")
+transform_df.drop(columns=['id', 'address', 'phone', 'email', 'name', 'hire_date'], inplace=True)
+print("After dropping ID, Address, Phone, Name, Hire Date, and Email, dataset look like")
+print(transform_df.head())
+
 
 print("Saving Transformed data csv to: '/opt/ml/processing/output/transformed_data.csv' ...")
 transform_df.to_csv("/opt/ml/processing/output/transformed_data.csv", index=False)
 print("\nTransformed data csv saved to: '/opt/ml/processing/output/transformed_data.csv'")
-
-### Step 2: Save Department Statistics
-print("Saving department statistics...")
-department_summary_report.to_csv("/opt/ml/processing/output/department_statistics.csv", index=False)
-print("✅ Department statistics saved to: '/opt/ml/processing/output/department_statistics.csv'")
