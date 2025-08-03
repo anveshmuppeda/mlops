@@ -2,6 +2,8 @@
 ## Employee Bonus Prediction - End-to-End Machine Learning Workflow
 *⇢ MLOps with AWS Series — Part 8*  
 
+![MLOps with AWS](./img/08-sagemaker-pipeline.png)
+
 This notebook demonstrates a complete MLOps pipeline using Amazon SageMaker Pipelines for predicting employee bonuses. The pipeline includes data preprocessing, model training, and model registration with proper governance.
 
 ---
@@ -130,6 +132,8 @@ step_preprocess = ProcessingStep(name="EmpBonusPreProcessing", step_args=process
 
 ---
 
+![Preprocessing Flow](./img/5-s3.png)
+
 ## **Step 3: Data Splitting**
 
 ### 🔧 **Purpose**: 
@@ -175,6 +179,8 @@ step_data_split = ProcessingStep(name="EmpBonusDataSplit", step_args=processor_a
 - **Training Set**: 70% - Used for model training
 - **Validation Set**: 20% - Used for hyperparameter tuning and model selection
 - **Test Set**: 10% - Used for final model evaluation
+
+![Preprocessing Flow](./img/6-s3-output.png)
 
 ---
 
@@ -240,6 +246,8 @@ step_training = TrainingStep(
 - **epochs**: 10 iterations through the data
 - **Output**: Trained model artifacts saved to S3
 
+![Training Flow](./img/7-s3-model.png)
+
 ---
 
 ## **Step 5: Model Registration**
@@ -296,6 +304,8 @@ step_register = ModelStep(
 
 ---
 
+![Model Registration Flow](./img/2-pipeline-status.png)
+
 ## **Step 6: Pipeline Creation and Configuration**
 
 ### 🔧 **Purpose**: 
@@ -334,6 +344,10 @@ pipeline.upsert(role_arn=role)
 
 **⚙️ Pipeline Parameters** allow runtime customization without code changes.
 
+![Pipeline Flow](./img/1-pipeline.png)
+![Pipeline Status](./img/2-pipeline-status.png)
+![Pipeline Execution](./img/3-pipeline-logs.png)
+![Pipeline Execution](./img/4-model-version-lineage.png)
 ---
 
 ## **Step 7: Pipeline Execution**
