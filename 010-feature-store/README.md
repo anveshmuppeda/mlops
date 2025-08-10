@@ -41,7 +41,7 @@ Before we dive in, ensure you have:
 
 **Cost Consideration**: SageMaker Feature Store charges for storage and API calls. This tutorial uses minimal data, so costs should be under $5.
 
-> **Note:** You can follow along using the `[create-feature-store.ipynb](./create-feature-store.ipynb)` notebook located in this directory for step-by-step code execution and hands-on practice.
+> **Note:** You can follow along using the **[create-feature-store.ipynb](./create-feature-store.ipynb)** notebook located in this directory for step-by-step code execution and hands-on practice.
 
 ---
 
