@@ -41,6 +41,8 @@ Before we dive in, ensure you have:
 
 **Cost Consideration**: SageMaker Feature Store charges for storage and API calls. This tutorial uses minimal data, so costs should be under $5.
 
+> **Note:** You can follow along using the `[create-feature-store.ipynb](./create-feature-store.ipynb)` notebook located in this directory for step-by-step code execution and hands-on practice.
+
 ---
 
 ## Part 1: Smart Data Transformation for ML
@@ -492,7 +494,7 @@ The complete code for this tutorial is available on my [GitHub repository](https
 - 📊 Monitoring templates
 
 ### Next Steps:
-1. **Clone the repository** and run the notebook
+1. **Clone the repository** and run the [notebook](./create-feature-store.ipynb) to follow along
 2. **Adapt the transformations** to your specific use case
 3. **Set up monitoring** for production deployment
 4. **Explore advanced patterns** like streaming ingestion
