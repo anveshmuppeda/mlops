@@ -26,6 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd 012-mlops-github-actions-pipeline
           python -m pip install --upgrade . botocore boto3 awscli
 
       - name: Configure AWS Credentials
@@ -38,6 +39,7 @@ jobs:
 
       - name: Build SageMaker Pipeline
         run: |
+          cd 012-mlops-github-actions-pipeline
           export SAGEMAKER_PROJECT_ID=$(aws sagemaker describe-project \
             --project-name ${{ env.SAGEMAKER_PROJECT_NAME }} \
             --query ProjectId \
