@@ -80,7 +80,7 @@ Resources:
       Timeout: 900
       Role: !GetAtt GitHubWorkflowTriggerLambdaExecutionRole.Arn
       Code:
-        S3Bucket: mlops-sagemaker-github-example
+        S3Bucket: mlops-githubactions-demo-project
         S3Key: lambda-github-workflow-trigger.zip
       Layers:
         - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:python39-github-arm64:1
