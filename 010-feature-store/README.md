@@ -4,6 +4,8 @@
 
 ---
 
+![Feature Store](./img/09-sagemaker-feature-store.png)
+
 ## The Feature Store Problem: Why Your ML Pipeline Needs It
 
 Imagine you're building a recommendation system for an e-commerce platform. Your data scientists create amazing features — customer lifetime value, purchase recency, seasonal buying patterns — but then face these challenges:
