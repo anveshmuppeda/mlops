@@ -157,7 +157,7 @@ To do this, after you enable administrator access to the SageMaker templates,
 
  27. On the Groups, roles, and users tab, choose Add groups, roles, users.
 
- 28. On the **Roles** tab, select the **role** you used when configuring your SageMaker Studio domain. This is where the SageMaker Domain Role can be found. ![alt text](/img/img2.png)
+ 28. On the **Roles** tab, select the **role** you used when configuring your SageMaker Studio domain. This is where the SageMaker Domain Role can be found. ![alt text](./img/img2.png)
 
  29. Choose Add access.
 
